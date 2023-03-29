@@ -153,7 +153,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       <Context docBase="jwbook" path="/jwbook" reloadable="true" source="org.eclipse.jst.jee.server:jwbook"/>
-      <Context docBase="/Users/hee/Desktop/JSPWebProgramming/jwbook/src/main/resources" path="/img" reloadable="true"/>
+      <Context docBase="/Users/hee/Desktop/GIT/resources" path="/img" relodable="true"/>
       </Host>
     </Engine>
   </Service>

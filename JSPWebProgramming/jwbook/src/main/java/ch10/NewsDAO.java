@@ -37,7 +37,7 @@ public class NewsDAO {
 		
 		String sql = "insert into news(title,img,content) values(?,?,?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		
+		System.out.println(pstmt);
 		try(conn;pstmt){
 			pstmt.setString(1, n.getTitle());
 			pstmt.setString(2,n.getImg());
