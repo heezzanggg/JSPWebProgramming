@@ -1,0 +1,15 @@
+package ch08;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ProductService {
+	Map<String,Product> products = new HashMap<>();
+	
+	public ProductService() {
+		Product p = new Product("101","애플사과폰 12","애플전",1200000,"2020.12.12");
+		products.put("101", p);
+		p = new Product("102","삼전우주폰 21","애플전",1200000,"2020.12.12");
+	}
+
+}

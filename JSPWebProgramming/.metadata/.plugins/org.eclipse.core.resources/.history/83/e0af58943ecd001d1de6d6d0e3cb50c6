@@ -1,0 +1,40 @@
+package ch09;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class StudentDAO {
+	//데이터베이스 연동을 위한 DAO클래스,
+	//DB 연결/종료,CRUD지원을 위한 메서드로 구성
+	
+	Connection conn = null;
+	PreparedStatement pstmt;
+	
+	final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+	final String JDBC_URL="jdbc:mysql://localhost:3306/sys";
+	
+	public void open() {
+		try {
+			Class.forName(JDBC_DRIVER);
+			conn = DriverManager.getConnection(JDBC_URL,"root","1234");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void close() {
+		try {
+			pstmt.close();
+			conn.close();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void insert(Student s) {
+		open();
+	}
+
+}

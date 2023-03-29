@@ -1,0 +1,10 @@
+package ch09;
+
+public class Student {
+	private int id;
+	private String username;
+	private String univ;
+	private Date birth;
+	private String email;
+
+}

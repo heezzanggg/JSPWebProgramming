@@ -1,0 +1,16 @@
+package ch09;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class StudentDAO {
+	//데이터베이스 연동을 위한 DAO클래스,
+	//DB 연결/종료,CRUD지원을 위한 메서드로 구성
+	
+	Connection conn = null;
+	PreparedStatement pstmt;
+	
+	final String JDBC_DRIVER = "";
+	final String JDBC_URL="";
+
+}

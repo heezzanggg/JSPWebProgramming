@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>뉴스 관리 앱</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container w-75 mt-5 mx-auto">
+		<h2>뉴스 목록</h2>
+		<hr>
+		<ul class="list-group">
+			<c:forEach var="news" items="${ newslist }" varStatus = "status">
+				<li class="list-group-item list-group-item-action d-flex justify-content-between align-tiems-center">
+				<a href="news.nhn?action=getNews&aid=${ news.aid }" class="text-decoration-none">[${status.count}] ${ news.title }, ${ news.date }</a>
+				<a href="news.nhn?action=deleteNews&aid=${news.aid }"><span class="adgebg-secondary"> &times;</span></a>
+				</li>
+			</c:forEach>
+		</ul>
+		
+		<hr>
+		<c:if test="${error != null }">
+			<div class="alert alert-danger alert-dismissible fade show mt-3">
+				에러발생: ${error }
+				<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+			</div>
+		</c:if>
+		<button type="button" class="btn btn-outline-info mb-3" data-bs-toggle="collapse" data-bs-target="#addForm" aria-expanded="false" aria-controls="addForm">
+		뉴스 등록</button>
+		<div class="collapse" id="addForm">
+			<div class="card card-body">
+				<form method="post" action="/jwbook/news.nhn?action=addNews" enctype="multipart/form-data">
+					<label class ="form-label">제목</label>
+					<input type="text" name="title" class="form-control">
+					<label class="form-label">이미지</label>
+					<input type="file" name="img" class="form-control">
+					<label class="form-label">기사내용</label>
+					<textarea cols="50" rows="5" name="content" class="form-control"></textarea>
+					<button type="submit" class="btn btn-success mt-3">저장</button>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

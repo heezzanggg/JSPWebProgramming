@@ -1,0 +1,14 @@
+package ch09;
+
+import java.sql.Date;
+
+public class Student {
+	private int id;
+	private String username;
+	private String univ;
+	private Date birth;
+	private String email;
+	
+	//getter, setter 생
+
+}

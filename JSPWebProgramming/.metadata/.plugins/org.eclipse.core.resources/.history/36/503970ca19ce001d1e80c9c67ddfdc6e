@@ -1,0 +1,11 @@
+package ch10;
+
+public class News {
+	
+	private int aid; //기사고유 아이디
+	private String title;
+	private String img;
+	private String date;
+	private String content;
+
+}

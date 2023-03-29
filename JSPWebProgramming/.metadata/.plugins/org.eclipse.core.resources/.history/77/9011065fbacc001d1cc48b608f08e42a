@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple Calculator</title>
+</head>
+<body>
+	<h2>계산기 서블릿</h2>
+	<hr>
+	<form method="post" action="/jwbook/calc">
+		<input type="text" name="n1" size="10">
+		<selct name="op">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+	
+	</form>
+
+</body>
+</html>
