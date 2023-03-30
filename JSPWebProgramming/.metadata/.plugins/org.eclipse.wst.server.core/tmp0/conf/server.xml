@@ -154,7 +154,7 @@
 
       
       <Context docBase="/Users/hee/Desktop/GIT/STUDY/JSPWebProgramming/JSPWebProgramming/JSPWebProgramming/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/hee/Desktop/GIT/resources" path="/img" relodable="true"/>
-      <Context docBase="/Users/hee/Desktop/GIT/STUDY/JSPWebProgramming/JSPWebProgramming/JSPWebProgramming/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/jwbook" path="/jwbook" reloadable="true" source="org.eclipse.jst.jee.server:jwbook"/></Host>
+      <Context docBase="/Users/hee/Desktop/GIT/STUDY/JSPWebProgramming/JSPWebProgramming/JSPWebProgramming/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/jwbook" path="/jwbook" reloadable="true" source="org.eclipse.jst.jee.server:jwbook"/><Context docBase="/Users/hee/Desktop/GIT/STUDY/JSPWebProgramming/JSPWebProgramming/JSPWebProgramming/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/spring_study" path="/spring_study" reloadable="true" source="org.eclipse.jst.jee.server:spring_study"/></Host>
     </Engine>
   </Service>
 </Server>

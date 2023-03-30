@@ -154,7 +154,7 @@
 
       
       <Context docBase="/Users/hee/Desktop/GIT/resources" path="/img" relodable="true"/>
-      <Context docBase="jwbook" path="/jwbook" reloadable="true" source="org.eclipse.jst.jee.server:jwbook"/></Host>
+      <Context docBase="jwbook" path="/jwbook" reloadable="true" source="org.eclipse.jst.jee.server:jwbook"/><Context docBase="spring_study" path="/spring_study" reloadable="true" source="org.eclipse.jst.jee.server:spring_study"/></Host>
     </Engine>
   </Service>
 </Server>
